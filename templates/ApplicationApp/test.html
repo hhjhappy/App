@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>upload</title>
+</head>
+<body>
+<form action="{% url 'backstage' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ back.as_table }}
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
